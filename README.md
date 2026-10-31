@@ -9,7 +9,7 @@ A public Halloween message board for a Raspberry Pi LED matrix.
 
 ## Behavior
 
-Visitors submit up to 60 printable ASCII characters. Messages scroll across the panel in large letters. The existing Halloween scenes play between visitor messages. Submissions are limited to one per IP every 30 seconds and ten queued messages. Queued messages expire after ten minutes; completed records are removed after a day during device polling.
+Visitors submit up to 60 printable ASCII characters. Messages scroll across the panel in large letters. The existing Halloween scenes play between visitor messages. There is no per-person message cooldown. The queue holds up to ten messages. Queued messages expire after ten minutes; completed records are removed after a day during device polling.
 
 ## Deployment
 
