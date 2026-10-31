@@ -1,0 +1,6 @@
+.env*
+.dev.vars*
+visitor-config.json
+last-displayed.json
+__pycache__/
+supabase/.temp/

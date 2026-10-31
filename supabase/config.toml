@@ -1,0 +1,2 @@
+[functions.window-api]
+verify_jwt = false
