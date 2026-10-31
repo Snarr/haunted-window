@@ -27,3 +27,9 @@ To restore the flight program:
 systemctl disable --now halloween-display
 systemctl enable --now panel
 ```
+
+## Pixel-accurate preview
+
+The browser draws a real 128x32 canvas from PixelOperator glyph rasters exported with Pillow at 16px. It mirrors the Pi's nearest-neighbor scaling (3x, capped at 28px high), RGB (255,170,75), vertical centering, integer clipping, and 36px/second visitor scroll. No browser font rendering or decorative LED texture is used. The preview loops and can be paused; reduced-motion preferences start it paused.
+
+`node tests/display.test.mjs` compares 56 complete RGBA frames against Pillow-generated reference hashes, including punctuation, all ASCII glyphs, long messages, and off-screen clipping. Regenerate the atlas and fixtures with the scripts in `tools/`, passing the Pi's `PixelOperator.ttf` as the argument.
